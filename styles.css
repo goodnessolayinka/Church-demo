@@ -418,75 +418,270 @@ body {
     margin: 0.5rem 0;
 }
 
-/* Contact Section */
+/* FLASHY Contact Section */
 .contact {
     padding: 4rem 2rem;
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #FFE5B4 0%, #FFF8DC 50%, #FFEFD5 100%);
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-grid {
+.contact::before {
+    content: '✨';
+    position: absolute;
+    font-size: 4rem;
+    opacity: 0.1;
+    top: -20px;
+    right: -20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.contact::after {
+    content: '✨';
+    position: absolute;
+    font-size: 4rem;
+    opacity: 0.1;
+    bottom: -20px;
+    left: -20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.contact h2 {
+    color: #1e3c72;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
 }
 
-.contact-form {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
+.church-building {
+    position: relative;
+    animation: slideInLeft 0.8s ease-out;
 }
 
-.contact-form input,
-.contact-form textarea {
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.church-img {
     width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: inherit;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(30, 60, 114, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.submit-btn {
-    width: 100%;
+.church-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(30, 60, 114, 0.35);
+}
+
+.church-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
     font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: pulse 2s ease-in-out infinite;
 }
 
-.submit-btn:hover {
-    transform: translateY(-2px);
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 
-.contact-info {
+.contact-content {
+    animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Quick Info Boxes */
+.quick-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-box {
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.3s;
+    z-index: 0;
+}
+
+.info-box:hover::before {
+    left: 100%;
+}
+
+.info-box > * {
+    position: relative;
+    z-index: 1;
+}
+
+.info-box-1 {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%);
+    color: white;
+}
+
+.info-box-2 {
+    background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+    color: white;
+}
+
+.info-box-3 {
+    background: linear-gradient(135deg, #FFB347 0%, #FFA500 100%);
+    color: white;
+}
+
+.info-box-4 {
+    background: linear-gradient(135deg, #A18CD1 0%, #FBC2EB 100%);
+    color: white;
+}
+
+.info-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.info-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-box h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.info-box p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Contact Form */
+.contact-form-wrapper {
     background: white;
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.contact-info h3 {
+.contact-form-wrapper h3 {
     color: #1e3c72;
     margin-bottom: 1.5rem;
     font-size: 1.3rem;
 }
 
-.info-item {
-    margin-bottom: 2rem;
+.form-group {
+    margin-bottom: 1rem;
 }
 
-.info-item h4 {
-    color: #2a5298;
-    margin-bottom: 0.5rem;
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s;
 }
 
-.info-item p {
-    color: #666;
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #2a5298;
+    box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+}
+
+.submit-btn-flash {
+    width: 100%;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
+}
+
+.submit-btn-flash:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(30, 60, 114, 0.4);
+}
+
+.submit-btn-flash:active {
+    transform: translateY(-1px);
 }
 
 /* Footer */
@@ -536,8 +731,16 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .giving-container,
-    .contact-grid {
+    .giving-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .quick-info {
         grid-template-columns: 1fr;
     }
 }
