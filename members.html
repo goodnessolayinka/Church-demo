@@ -5,7 +5,150 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Members & Priests — St. David's Anglican Church, Osogbo</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root {
+    --primary: #1e3c72;
+    --secondary: #2a5298;
+    --gold: #c5a059;
+    --cream: #faf8f5;
+    --dark: #222222;
+    --mid: #555555;
+  }
+  body {
+    background-color: var(--cream);
+    color: var(--dark);
+    font-family: 'Jost', sans-serif;
+  }
+  nav {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.75rem;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.active {
+    color: var(--gold);
+  }
+  .page-header {
+    background: linear-gradient(rgba(30,60,114,0.9), rgba(42,82,152,0.9)), url('https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=1200&q=80') center/cover;
+    color: white;
+    text-align: center;
+    padding: 5rem 1.5rem;
+  }
+  .section-label {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .section-title em {
+    font-style: italic;
+    color: #e6c584;
+  }
+  .gold-line {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 1rem auto;
+  }
+  .content-container {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+  }
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+  .card-item {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--gold);
+  }
+  .card-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  }
+  .card-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem auto;
+    border: 3px solid var(--gold);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .card-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+  }
+  .card-role {
+    font-size: 0.9rem;
+    color: var(--gold);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  .card-desc {
+    color: var(--mid);
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+  footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 5rem;
+  }
+  .foot-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  @media(max-width: 768px) {
+    .nav-links { display: none; }
+    .section-title { font-size: 2.2rem; }
+  }
+</style>
 </head>
 <body>
 
@@ -23,31 +166,31 @@
 <header class="page-header">
   <p class="section-label">Faithful Stewards</p>
   <h1 class="section-title">Pioneer Members & <em>Clergy</em></h1>
-  <div class="gold-line" style="margin: 1.5rem auto;"></div>
-  <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; font-size: 1.05rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
+  <div class="gold-line"></div>
+  <p style="color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto; font-size: 1.1rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
     Honoring the shoulders upon which our vibrant parish stands today.
   </p>
 </header>
 
 <main class="content-container">
   
-  <section style="margin-bottom: 4rem;">
+  <section style="margin-bottom: 5rem;">
     <div style="text-align: center; margin-bottom: 3rem;">
       <p class="section-label">Spiritual Leadership</p>
       <h2 class="section-title">Clerical <em>Succession</em></h2>
-      <div class="gold-line" style="margin: 1rem auto;"></div>
+      <div class="gold-line"></div>
       <p style="color: var(--mid);">Honoring the devoted priests who have shepherded St. David's through the decades.</p>
     </div>
 
     <div class="grid-cards">
       <div class="card-item">
-        <div class="card-img-placeholder">🕊️</div>
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=300&q=80" alt="Rev. Odelola" class="card-avatar">
         <h3>Rev. Odelola</h3>
         <p class="card-role">Vicar / Parish Priest</p>
         <p class="card-desc">Leading St. David's with spiritual wisdom, administrative excellence, and pastoral zeal.</p>
       </div>
       <div class="card-item">
-        <div class="card-img-placeholder">✝</div>
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Past Vicars" class="card-avatar">
         <h3>Past Vicars & Priests</h3>
         <p class="card-role">Roll of Honor</p>
         <p class="card-desc">Succeeding generations of faithful heralds of the Gospel who laid down deep roots in Osogbo.</p>
@@ -59,19 +202,19 @@
     <div style="text-align: center; margin-bottom: 3rem;">
       <p class="section-label">Foundational Pillars</p>
       <h2 class="section-title">Pioneer <em>Families</em></h2>
-      <div class="gold-line" style="margin: 1rem auto;"></div>
+      <div class="gold-line"></div>
       <p style="color: var(--mid);">Remembering the steadfast families whose sacrifice and dedication built our sanctuary.</p>
     </div>
 
     <div class="grid-cards">
       <div class="card-item">
-        <div class="card-img-placeholder">🏛️</div>
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Founding Elders" class="card-avatar">
         <h3>Founding Elders</h3>
         <p class="card-role">Pioneer Pillar</p>
         <p class="card-desc">The early church committee members and lay readers who stood firm during the inception years.</p>
       </div>
       <div class="card-item">
-        <div class="card-img-placeholder">👥</div>
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" alt="Congregational Heritage" class="card-avatar">
         <h3>Congregational Heritage</h3>
         <p class="card-role">Parishioners</p>
         <p class="card-desc">Generations of families carrying the torch of Anglican worship across Osogbo and beyond.</p>
@@ -83,7 +226,7 @@
 
 <footer>
   <p class="foot-logo">✦ St. David's Anglican Church, Osogbo</p>
-  <p>© 2026 St. David's Anglican Church. Diocese of Osun. All rights reserved.</p>
+  <p style="font-size: 0.9rem; opacity: 0.8;">© 2026 St. David's Anglican Church. Diocese of Osun. All rights reserved.</p>
 </footer>
 
 </body>
