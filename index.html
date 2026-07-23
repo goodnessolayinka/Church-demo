@@ -1,284 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grace Community Church - Welcome</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>St. David's Anglican Church, Osogbo — Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">⛪ Grace Community Church</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#sermons">Sermons</a></li>
-                <li><a href="#giving">Give</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Grace Community Church</h1>
-            <p>Finding God's Love, Building God's Family</p>
-            <button class="cta-button" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Learn More</button>
-        </div>
-        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&h=600&fit=crop" alt="Church" class="hero-img">
-    </section>
+<nav>
+  <div class="nav-logo">✝ St. David's Osogbo</div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="history.html">History</a></li>
+    <li><a href="members.html">Members</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <h3>🙏 Our Mission</h3>
-                    <p>To share the love of Christ and build a welcoming community where everyone feels valued and connected to God.</p>
-                </div>
-                <div class="about-card">
-                    <h3>✨ Our Vision</h3>
-                    <p>To be a beacon of hope and light in our community, making a positive impact through faith, service, and compassion.</p>
-                </div>
-                <div class="about-card">
-                    <h3>💪 Our Values</h3>
-                    <p>Faith, Love, Community, Service, and Growth. We believe in living out these values in everything we do.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+  <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1548625149-720754862bfb?w=1600&q=80');"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-cross">✝</div>
+    <h1>St. David's <em>Anglican Church</em></h1>
+    <p class="hero-tagline">Winning Souls for Christ in Osogbo</p>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">"Rooted in rich heritage, vibrant in worship, and steadfast in faith."</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="history.html" class="hero-cta">Learn Our History</a>
+      <a href="contact.html" class="hero-cta" style="background: transparent; border: 1px solid var(--gold); color: var(--gold-light);">Join Us This Sunday</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
 
-    <!-- Services & Location -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Service Times & Location</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>⛪ Sunday Service</h3>
-                    <p><strong>Time:</strong> 10:00 AM - 11:30 AM</p>
-                    <p><strong>Location:</strong> Main Sanctuary</p>
-                </div>
-                <div class="service-card">
-                    <h3>🙏 Wednesday Prayer Night</h3>
-                    <p><strong>Time:</strong> 7:00 PM - 8:00 PM</p>
-                    <p><strong>Location:</strong> Fellowship Hall</p>
-                </div>
-                <div class="service-card">
-                    <h3>👥 Youth Group</h3>
-                    <p><strong>Time:</strong> Saturday 6:00 PM - 8:00 PM</p>
-                    <p><strong>Location:</strong> Youth Center</p>
-                </div>
-            </div>
-            <div class="location-info">
-                <h3>Find Us Here</h3>
-                <p>📍 <strong>Grace Community Church</strong></p>
-                <p>123 Faith Street, Hope City, HC 12345</p>
-                <p>📞 (555) 123-4567</p>
-                <p>📧 info@gracecommunity.church</p>
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00601!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3855dff%3A0xfe01d582591e1048!2s123%20Main%20St%20New%20York%20NY%2010013!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-img-wrap">
+      <img src="https://images.unsplash.com/photo-1438232992991-995b671e4668?w=800&q=80" alt="Church interior" />
+      <div class="about-img-accent"></div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">Welcome to St. David's</p>
+      <h2 class="section-title">Winning Souls <em>for Christ</em> in Osogbo</h2>
+      <div class="gold-line"></div>
+      <p>St. David's Anglican Church stands as a beacon of light, spiritual growth, and unwavering devotion in Osogbo, Osun State. From generations past to the present day, our fellowship remains dedicated to spreading the Gospel and nurturing hearts in Christian love.</p>
+      <p>Whether you are seeking a church home or visiting Osogbo, our doors and hearts are wide open to welcome you into our growing family of faith.</p>
+      <blockquote class="verse">
+        "I was glad when they said unto me, Let us go into the house of the Lord."
+        <cite>— Psalm 122:1</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
 
-    <!-- Events Section -->
-    <section id="events" class="events">
-        <div class="container">
-            <h2>Upcoming Events</h2>
-            <div class="events-grid">
-                <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=300&h=200&fit=crop" alt="Community Potluck">
-                    <h3>Community Potluck Dinner</h3>
-                    <p>May 15, 2026 - 6:00 PM</p>
-                    <p>Join us for a delicious dinner and fellowship with our church family.</p>
-                </div>
-                <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=300&h=200&fit=crop" alt="Bible Study">
-                    <h3>Summer Bible Study</h3>
-                    <p>May 20 - August 30, 2026</p>
-                    <p>Deep dive into Scripture this summer with our guided Bible study series.</p>
-                </div>
-                <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=300&h=200&fit=crop" alt="Praise Concert">
-                    <h3>Community Praise Concert</h3>
-                    <p>June 5, 2026 - 7:00 PM</p>
-                    <p>An evening of inspiring worship and uplifting music. All are welcome!</p>
-                </div>
-                <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=300&h=200&fit=crop" alt="Service Day">
-                    <h3>Community Service Day</h3>
-                    <p>June 12, 2026 - 9:00 AM</p>
-                    <p>Make a difference! Join us as we serve our community together.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="services" id="services">
+  <div class="services-inner">
+    <p class="section-label">Worship With Us</p>
+    <h2 class="section-title">Service <em>Schedule</em></h2>
+    <div class="gold-line"></div>
+    <p style="color: var(--mid); font-size: 0.95rem; max-width: 500px; margin: 0 auto;">Join us throughout the week for uplifting worship, powerful prayer, and deep fellowship.</p>
 
-    <!-- Sermons Section -->
-    <section id="sermons" class="sermons">
-        <div class="container">
-            <h2>Latest Sermons</h2>
-            <div class="sermons-grid">
-                <div class="sermon-card">
-                    <img src="https://images.unsplash.com/photo-1516627145497-ae3ddd1589d3?w=300&h=200&fit=crop" alt="Sermon 1">
-                    <h3>Faith in Uncertain Times</h3>
-                    <p><strong>Pastor John Smith</strong></p>
-                    <p>May 5, 2026</p>
-                    <p>A powerful message about trusting God's plan even when the road ahead seems unclear.</p>
-                    <button class="play-btn" onclick="alert('Video player would open here!')">▶ Watch</button>
-                </div>
-                <div class="sermon-card">
-                    <img src="https://images.unsplash.com/photo-1516627145497-ae3ddd1589d3?w=300&h=200&fit=crop" alt="Sermon 2">
-                    <h3>The Power of Prayer</h3>
-                    <p><strong>Pastor Sarah Johnson</strong></p>
-                    <p>April 28, 2026</p>
-                    <p>Discover how prayer transforms lives and strengthens our connection with God.</p>
-                    <button class="play-btn" onclick="alert('Video player would open here!')">▶ Watch</button>
-                </div>
-                <div class="sermon-card">
-                    <img src="https://images.unsplash.com/photo-1516627145497-ae3ddd1589d3?w=300&h=200&fit=crop" alt="Sermon 3">
-                    <h3>Living with Purpose</h3>
-                    <p><strong>Pastor Michael Brown</strong></p>
-                    <p>April 21, 2026</p>
-                    <p>Learn how to discover your God-given purpose and live a life of meaning.</p>
-                    <button class="play-btn" onclick="alert('Video player would open here!')">▶ Watch</button>
-                </div>
-                <div class="sermon-card">
-                    <img src="https://images.unsplash.com/photo-1516627145497-ae3ddd1589d3?w=300&h=200&fit=crop" alt="Sermon 4">
-                    <h3>Love One Another</h3>
-                    <p><strong>Pastor Emily White</strong></p>
-                    <p>April 14, 2026</p>
-                    <p>An inspiring sermon on extending God's love to everyone we meet.</p>
-                    <button class="play-btn" onclick="alert('Video player would open here!')">▶ Watch</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🕊️</div>
+        <h3>Sunday Holy Communion</h3>
+        <p class="time">8:00 AM — 11:00 AM</p>
+        <p>Our principal Sunday service featuring traditional Anglican liturgy, choir ministration, and the Word of God.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📖</div>
+        <h3>Bible Study</h3>
+        <p class="time">Wednesday · 5:30 PM</p>
+        <p>Midweek spiritual nourishment and exposition of scriptures to anchor our faith for the week.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🙏</div>
+        <h3>Prayer & Vigil</h3>
+        <p class="time">Friday · 5:30 PM</p>
+        <p>Corporate intercession, breaking strongholds, and seeking divine direction in a unified assembly.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Giving Section -->
-    <section id="giving" class="giving">
-        <div class="container">
-            <h2>Support Our Ministry</h2>
-            <p class="giving-intro">Your generous giving helps us serve our community and spread God's love.</p>
-            <div class="giving-container">
-                <div class="giving-form">
-                    <h3>Make a Donation</h3>
-                    <form id="donationForm">
-                        <div class="amount-buttons">
-                            <button type="button" class="amount-btn" onclick="setAmount(10)">$10</button>
-                            <button type="button" class="amount-btn" onclick="setAmount(25)">$25</button>
-                            <button type="button" class="amount-btn" onclick="setAmount(50)">$50</button>
-                            <button type="button" class="amount-btn" onclick="setAmount(100)">$100</button>
-                            <button type="button" class="amount-btn" onclick="setAmount(250)">$250</button>
-                        </div>
-                        <input type="number" id="customAmount" placeholder="Custom Amount" min="1">
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="email" placeholder="Email Address" required>
-                        <input type="tel" placeholder="Phone Number">
-                        <select required>
-                            <option value="">Select Fund</option>
-                            <option value="general">General Fund</option>
-                            <option value="building">Building Fund</option>
-                            <option value="missions">Missions</option>
-                            <option value="youth">Youth Ministry</option>
-                            <option value="benevolence">Benevolence</option>
-                        </select>
-                        <button type="submit" class="donate-btn">Donate Now</button>
-                    </form>
-                </div>
-                <div class="giving-info">
-                    <h3>Why Give?</h3>
-                    <ul>
-                        <li>✝️ Support our ministry and outreach programs</li>
-                        <li>🏘️ Help maintain our church facility</li>
-                        <li>🌍 Fund our mission work around the world</li>
-                        <li>👥 Invest in youth and community programs</li>
-                        <li>❤️ Demonstrate your love and commitment</li>
-                    </ul>
-                    <p><strong>All donations are tax-deductible.</strong></p>
-                    <p>Grace Community Church is a 501(c)(3) non-profit organization.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer>
+  <p class="foot-logo">✦ St. David's Anglican Church, Osogbo</p>
+  <p>© 2026 St. David's Anglican Church. All rights reserved.</p>
+</footer>
 
-    <!-- Contact Section - FLASHY VERSION -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch With Us</h2>
-            <div class="contact-wrapper">
-                <!-- Church Building Image -->
-                <div class="church-building">
-                    <img src="https://images.unsplash.com/photo-1507825585269-685cb3427e1d?w=400&h=500&fit=crop" alt="Our Church Building" class="church-img">
-                    <div class="church-badge">📍 Visit Us Today!</div>
-                </div>
-
-                <!-- Contact Form & Info -->
-                <div class="contact-content">
-                    <!-- Quick Info Boxes -->
-                    <div class="quick-info">
-                        <div class="info-box info-box-1">
-                            <div class="info-icon">📍</div>
-                            <h4>Address</h4>
-                            <p>123 Faith Street<br>Hope City, HC 12345</p>
-                        </div>
-                        <div class="info-box info-box-2">
-                            <div class="info-icon">📞</div>
-                            <h4>Phone</h4>
-                            <p>(555) 123-4567</p>
-                        </div>
-                        <div class="info-box info-box-3">
-                            <div class="info-icon">📧</div>
-                            <h4>Email</h4>
-                            <p>info@gracecommunity.church</p>
-                        </div>
-                        <div class="info-box info-box-4">
-                            <div class="info-icon">⏰</div>
-                            <h4>Hours</h4>
-                            <p>Mon-Fri: 9AM-5PM<br>By Appointment Weekends</p>
-                        </div>
-                    </div>
-
-                    <!-- Contact Form -->
-                    <div class="contact-form-wrapper">
-                        <h3>Send us a Message</h3>
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                                <input type="text" placeholder="Your Full Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" placeholder="Your Phone Number">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="Subject" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea placeholder="Your Message" rows="4" required></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn-flash">✉️ Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Grace Community Church. All rights reserved.</p>
-            <p>🙏 Serving our community with love, faith, and purpose. 🙏</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
