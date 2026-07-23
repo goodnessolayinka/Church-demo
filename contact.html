@@ -6,24 +6,48 @@
 <title>Contact Us — St. David's Anglican Church, Osogbo</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .contact { padding: 4rem 0; background: var(--cream); }
+  .contact h2 { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--primary); margin-bottom: 2rem; }
+  .contact-wrapper { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+  .church-building { position: relative; min-height: 350px; }
+  .church-img { width: 100%; height: 100%; object-fit: cover; }
+  .church-badge { position: absolute; top: 15px; left: 15px; background: var(--gold); color: white; padding: 0.4rem 0.8rem; border-radius: 4px; font-weight: 500; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .contact-content { padding: 2.5rem; }
+  .quick-info { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+  .info-box { background: var(--cream); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--gold); }
+  .info-icon { font-size: 1.2rem; margin-bottom: 0.3rem; }
+  .info-box h4 { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--primary); margin-bottom: 0.15rem; }
+  .info-box p { font-size: 0.8rem; color: var(--mid); line-height: 1.3; }
+  .contact-form-wrapper h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--primary); margin-bottom: 0.8rem; }
+  .contact-form .form-group { margin-bottom: 0.8rem; }
+  .contact-form input, .contact-form textarea { width: 100%; padding: 0.6rem 0.8rem; border: 1px solid #ddd; border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 0.85rem; }
+  .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary); }
+  .submit-btn-flash { background: var(--primary); color: white; border: none; padding: 0.6rem 1.5rem; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 0.9rem; transition: background 0.3s; width: 100%; }
+  .submit-btn-flash:hover { background: var(--secondary); }
+  @media(max-width: 900px) {
+    .contact-wrapper { grid-template-columns: 1fr; }
+    .contact-content { padding: 1.5rem; }
+  }
+</style>
 </head>
 <body>
 
 <nav class="navbar">
   <div class="nav-container">
-    <div class="logo">✝ St. David's Osogbo</div>
+    <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">✝ St. David's Osogbo</a></div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="history.html">History</a></li>
       <li><a href="members.html">Members & Priests</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <section class="contact">
-  <div class="container">
+  <div class="container" style="max-width: 1100px;">
     <h2>Get in Touch with St. David's</h2>
     <div class="contact-wrapper">
       <div class="church-building">
@@ -33,31 +57,31 @@
       
       <div class="contact-content">
         <div class="quick-info">
-          <div class="info-box info-box-1">
+          <div class="info-box">
             <div class="info-icon">📍</div>
             <h4>Location</h4>
-            <p>St. David's Anglican Church, Isale Osun, Osogbo, Osun State</p>
+            <p>St. David's Anglican Church, Isale Osun, Osogbo</p>
           </div>
-          <div class="info-box info-box-2">
+          <div class="info-box">
             <div class="info-icon">🕒</div>
-            <h4>Service Hours</h4>
-            <p>Sunday Eucharist: 7:30 AM<br>Bible Study: Wed 5:00 PM</p>
+            <h4>Services</h4>
+            <p>Sun: 7:30 AM<br>Wed Bible Study: 5 PM</p>
           </div>
-          <div class="info-box info-box-3">
+          <div class="info-box">
             <div class="info-icon">📞</div>
-            <h4>Phone / WhatsApp</h4>
-            <p><a href="https://wa.me/2348000000000" target="_blank" style="color:white; text-decoration:underline;">Chat with us on WhatsApp</a></p>
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/2348000000000" target="_blank" style="color:var(--primary); text-decoration:underline;">Chat with us</a></p>
           </div>
-          <div class="info-box info-box-4">
+          <div class="info-box">
             <div class="info-icon">✉️</div>
-            <h4>Email Parish</h4>
+            <h4>Email</h4>
             <p>info@stdavidsosogbo.org</p>
           </div>
         </div>
 
         <div class="contact-form-wrapper">
           <h3>Send Us a Message</h3>
-          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to St. David Parish Office.');">
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent.');">
             <div class="form-group">
               <input type="text" placeholder="Your Full Name" required>
             </div>
@@ -68,7 +92,7 @@
               <input type="tel" placeholder="Phone Number / WhatsApp">
             </div>
             <div class="form-group">
-              <textarea rows="4" placeholder="Your Prayer Request or Inquiry..." required></textarea>
+              <textarea rows="3" placeholder="Your Prayer Request or Inquiry..." required></textarea>
             </div>
             <button type="submit" class="submit-btn-flash">Send Message</button>
           </form>
