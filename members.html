@@ -53,11 +53,6 @@
     margin: 4rem auto;
     padding: 0 1.5rem;
   }
-  .grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-  }
   .card-item {
     background: white;
     border-radius: 12px;
@@ -140,6 +135,24 @@
   .vicar-card:hover {
     transform: translateY(-4px);
   }
+
+  /* PCC Members Section */
+  .pcc-container {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--gold);
+    text-align: center;
+  }
+  .pcc-image {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  }
   
   @media(max-width: 768px) {
     .nav-links { display: none; }
@@ -164,10 +177,10 @@
 
 <header class="page-header">
   <p class="section-label">Faithful Stewards</p>
-  <h1 class="section-title">Pioneer Members & <em>Clergy</em></h1>
+  <h1 class="section-title">Parish Leadership & <em>Clergy</em></h1>
   <div class="gold-line"></div>
   <p style="color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto; font-size: 1.1rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
-    Honoring the shoulders upon which our vibrant parish stands today.
+    Honoring our shepherds through the decades and our current parish leadership.
   </p>
 </header>
 
@@ -192,13 +205,13 @@
     </div>
   </section>
 
-  <!-- Past Vicars Horizontal Scroll -->
+  <!-- Past Vicars Horizontal Scroll (15 Vicars) -->
   <section style="margin-bottom: 5rem;">
     <div style="text-align: center; margin-bottom: 2rem;">
       <p class="section-label">Roll of Honor</p>
       <h2 class="section-title">Past <em>Vicars</em> & Priests</h2>
       <div class="gold-line"></div>
-      <p style="color: var(--mid);">Swipe horizontally to explore the dedicated shepherds who served through the decades.</p>
+      <p style="color: var(--mid);">Swipe horizontally to explore the dedicated shepherds who served our parish through the decades.</p>
     </div>
 
     <div class="vicars-scroll-container">
@@ -206,53 +219,113 @@
         <div class="vicar-card">
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Ven. J. A. Adebayo" class="card-avatar">
           <h3>Ven. J. A. Adebayo</h3>
-          <p class="card-role">1998 – 2008</p>
-          <p class="card-desc">Oversaw the expansion of the church nave and establishment of the youth fellowship.</p>
+          <p class="card-role">2021 – 2025</p>
+          <p class="card-desc">Spearheaded the modern digital outreach and community youth development programs.</p>
         </div>
         <div class="vicar-card">
           <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Rt. Rev. M. O. Fagun" class="card-avatar">
           <h3>Rt. Rev. M. O. Fagun</h3>
-          <p class="card-role">1985 – 1997</p>
+          <p class="card-role">2016 – 2021</p>
           <p class="card-desc">Strengthened diocesan ties and nurtured deep spiritual discipline in the parish.</p>
         </div>
         <div class="vicar-card">
           <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80" alt="Canon E. B. Olawale" class="card-avatar">
           <h3>Canon E. B. Olawale</h3>
-          <p class="card-role">1970 – 1984</p>
-          <p class="card-desc">Pioneered community outreach programs and the founding of the church choir.</p>
+          <p class="card-role">2011 – 2016</p>
+          <p class="card-desc">Pioneered community outreach programs and the founding of the church choir expansion.</p>
         </div>
         <div class="vicar-card">
           <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" alt="Rev. D. A. Alabi" class="card-avatar">
           <h3>Rev. D. A. Alabi</h3>
-          <p class="card-role">1955 – 1969</p>
+          <p class="card-role">2006 – 2011</p>
           <p class="card-desc">Established foundational educational classes and anchored early parish growth.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80" alt="Very Rev. S. K. Babalola" class="card-avatar">
+          <h3>Very Rev. S. K. Babalola</h3>
+          <p class="card-role">2001 – 2006</p>
+          <p class="card-desc">Oversaw major structural renovations of the main rectory and sanctuary hall.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80" alt="Ven. T. O. Ajayi" class="card-avatar">
+          <h3>Ven. T. O. Ajayi</h3>
+          <p class="card-role">1996 – 2001</p>
+          <p class="card-desc">Deepened pastoral visitation and invigorated the Women's Guild ministry.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" alt="Canon B. A. Adeleke" class="card-avatar">
+          <h3>Canon B. A. Adeleke</h3>
+          <p class="card-role">1991 – 1996</p>
+          <p class="card-desc">Championed youth mentorship and expanded the daily prayer fellowship.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Rev. Dr. C. O. Ogundipe" class="card-avatar">
+          <h3>Rev. Dr. C. O. Ogundipe</h3>
+          <p class="card-role">1986 – 1991</p>
+          <p class="card-desc">Introduced dynamic theological classes and structured choir administration.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80" alt="Ven. P. O. Akinsola" class="card-avatar">
+          <h3>Ven. P. O. Akinsola</h3>
+          <p class="card-role">1981 – 1986</p>
+          <p class="card-desc">Strengthened parish finances and consolidated church land documentation.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Canon S. O. Olowookere" class="card-avatar">
+          <h3>Canon S. O. Olowookere</h3>
+          <p class="card-role">1976 – 1981</p>
+          <p class="card-desc">Fostered deep ecumenical cooperation across Osogbo archdeaconry.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80" alt="Rev. M. A. Ojo" class="card-avatar">
+          <h3>Rev. M. A. Ojo</h3>
+          <p class="card-role">1971 – 1976</p>
+          <p class="card-desc">Expanded Sunday school enrollment and built the foundational catechism curriculum.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80" alt="Ven. E. O. Okenla" class="card-avatar">
+          <h3>Ven. E. O. Okenla</h3>
+          <p class="card-role">1966 – 1971</p>
+          <p class="card-desc">Guided the parish through post-independence regional transitions.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Canon J. F. O. Bamidele" class="card-avatar">
+          <h3>Canon J. F. O. Bamidele</h3>
+          <p class="card-role">1961 – 1966</p>
+          <p class="card-desc">Enhanced liturgical excellence and choral harmony in weekly services.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80" alt="Rev. D. E. A. Adewuyi" class="card-avatar">
+          <h3>Rev. D. E. A. Adewuyi</h3>
+          <p class="card-role">1956 – 1961</p>
+          <p class="card-desc">Cemented community welfare initiatives for underprivileged parishioners.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" alt="Ven. Archdeacon E. T. Latunde" class="card-avatar">
+          <h3>Ven. Arch. E. T. Latunde</h3>
+          <p class="card-role">1950 – 1955</p>
+          <p class="card-desc">Inaugural pioneer priest who laid the spiritual foundation of St. David's.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pioneer Families -->
+  <!-- Current PCC Members Section -->
   <section>
     <div style="text-align: center; margin-bottom: 3rem;">
-      <p class="section-label">Foundational Pillars</p>
-      <h2 class="section-title">Pioneer <em>Families</em></h2>
+      <p class="section-label">Parish Administration</p>
+      <h2 class="section-title">Current <em>PCC Members</em></h2>
       <div class="gold-line"></div>
-      <p style="color: var(--mid);">Remembering the steadfast families whose sacrifice and dedication built our sanctuary.</p>
+      <p style="color: var(--mid);">The Parochial Church Council driving the spiritual, financial, and infrastructural vision of St. David's.</p>
     </div>
 
-    <div class="grid-cards">
-      <div class="card-item">
-        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Founding Elders" class="card-avatar">
-        <h3>Founding Elders</h3>
-        <p class="card-role">Pioneer Pillar</p>
-        <p class="card-desc">The early church committee members and lay readers who stood firm during the inception years.</p>
-      </div>
-      <div class="card-item">
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" alt="Congregational Heritage" class="card-avatar">
-        <h3>Congregational Heritage</h3>
-        <p class="card-role">Parishioners</p>
-        <p class="card-desc">Generations of families carrying the torch of Anglican worship across Osogbo and beyond.</p>
-      </div>
+    <div class="pcc-container">
+      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="Current PCC Members Group Photograph" class="pcc-image">
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;">St. David's PCC 2026/2027 Council</h3>
+      <p class="card-role" style="margin-bottom: 1.5rem;">Executive Parish Council</p>
+      <p class="card-desc" style="max-width: 700px; margin: 0 auto; color: var(--mid);">
+        Comprising dedicated lay readers, guild leaders, church wardens, and treasurers working hand-in-hand with the Vicar to foster growth, spiritual vitality, and community welfare.
+      </p>
     </div>
   </section>
 
