@@ -5,7 +5,132 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery — St. David's Anglican Church, Osogbo</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root {
+    --primary: #1e3c72;
+    --secondary: #2a5298;
+    --gold: #c5a059;
+    --cream: #faf8f5;
+    --dark: #222222;
+    --mid: #555555;
+  }
+  body {
+    background-color: var(--cream);
+    color: var(--dark);
+    font-family: 'Jost', sans-serif;
+  }
+  nav {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.active {
+    color: var(--gold);
+  }
+  .page-header {
+    background: linear-gradient(rgba(30,60,114,0.9), rgba(42,82,152,0.9)), url('https://images.unsplash.com/photo-1548625149-720754862bfb?auto=format&fit=crop&w=1200&q=80') center/cover;
+    color: white;
+    text-align: center;
+    padding: 3.5rem 1rem;
+  }
+  .section-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+  .section-title em {
+    font-style: italic;
+    color: #e6c584;
+  }
+  .gold-line {
+    width: 50px;
+    height: 3px;
+    background: var(--gold);
+    margin: 0.8rem auto;
+  }
+  .content-container {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  .g-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+  }
+  .g-item:hover {
+    transform: translateY(-4px);
+  }
+  .g-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .g-caption {
+    padding: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--primary);
+    text-align: center;
+    font-weight: 600;
+  }
+  footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+  }
+  .foot-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+  @media(max-width: 768px) {
+    .nav-links { display: none; }
+    .section-title { font-size: 1.9rem; }
+    .page-header { padding: 3rem 1rem; }
+  }
+</style>
 </head>
 <body>
 
@@ -23,16 +148,16 @@
 <header class="page-header">
   <p class="section-label">Visual Archive</p>
   <h1 class="section-title">Sanctuary & <em>Life</em></h1>
-  <div class="gold-line" style="margin: 1.5rem auto;"></div>
-  <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; font-size: 1.05rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
+  <div class="gold-line"></div>
+  <p style="color: rgba(255,255,255,0.85); max-width: 500px; margin: 0 auto; font-size: 0.95rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
     Glimpses of worship, fellowship, and architecture at St. David's.
   </p>
 </header>
 
 <main class="content-container">
   <div class="gallery-grid">
-    <div class="g-item g1">
-      <img src="https://images.unsplash.com/photo-1548625149-720754862bfb?w=1000&q=80" alt="Church Building" />
+    <div class="g-item">
+      <img src="https://images.unsplash.com/photo-1548625149-720754862bfb?w=800&q=80" alt="Church Building" />
       <div class="g-caption">St. David's Sanctuary Exterior</div>
     </div>
     <div class="g-item">
