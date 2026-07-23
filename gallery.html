@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery — St. David's Anglican Church, Osogbo</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,43 +14,49 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="history.html">History</a></li>
-    <li><a href="members.html">Members</a></li>
+    <li><a href="members.html">Members & Priests</a></li>
     <li><a href="gallery.html" class="active">Gallery</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<section class="hero" style="min-height: 55vh;">
-  <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?w=1600&q=80');"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="section-label" style="color: var(--gold-light);">Visual Chronicle</p>
-    <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem);">Sanctuary <em>& Events Gallery</em></h1>
-  </div>
-</section>
+<header class="page-header">
+  <p class="section-label">Visual Archive</p>
+  <h1 class="section-title">Sanctuary & <em>Life</em></h1>
+  <div class="gold-line" style="margin: 1.5rem auto;"></div>
+  <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; font-size: 1.05rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
+    Glimpses of worship, fellowship, and architecture at St. David's.
+  </p>
+</header>
 
-<section class="gallery" style="background: var(--dark); padding: 6rem 2rem;">
-  <div class="gallery-inner" style="max-width: 1100px; margin: 0 auto;">
-    <p class="section-label">Moments in Fellowship</p>
-    <h2 class="section-title" style="color:#fff;">Life at St. <em>David's</em></h2>
-    <div class="gold-line"></div>
-    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 3rem;">
-      Explore our sacred sanctuary, congregational gatherings, choir ministrations, and celebratory moments in Osogbo.
-    </p>
-
-    <div class="gallery-grid">
-      <img class="g1" src="https://images.unsplash.com/photo-1548625149-720754862bfb?w=800&q=80" alt="Church Exterior" />
-      <img src="https://images.unsplash.com/photo-1508558936510-0af1e3cccbab?w=600&q=80" alt="Worship Service" />
-      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600&q=80" alt="Congregation" />
-      <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=600&q=80" alt="Fellowship" />
-      <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=600&q=80" alt="Choir Ministration" />
+<main class="content-container">
+  <div class="gallery-grid">
+    <div class="g-item g1">
+      <img src="https://images.unsplash.com/photo-1548625149-720754862bfb?w=1000&q=80" alt="Church Building" />
+      <div class="g-caption">St. David's Sanctuary Exterior</div>
+    </div>
+    <div class="g-item">
+      <img src="https://images.unsplash.com/photo-1438232992991-995b671e4668?w=800&q=80" alt="Sanctuary Interior" />
+      <div class="g-caption">Altar & Sanctuary</div>
+    </div>
+    <div class="g-item">
+      <img src="https://images.unsplash.com/photo-1508558936510-0af1e3cccbab?w=800&q=80" alt="Worship Service" />
+      <div class="g-caption">Sunday Worship Service</div>
+    </div>
+    <div class="g-item">
+      <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80" alt="Congregation" />
+      <div class="g-caption">Parishioners Fellowship</div>
+    </div>
+    <div class="g-item">
+      <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&q=80" alt="Choir" />
+      <div class="g-caption">The Church Choir</div>
     </div>
   </div>
-</section>
+</main>
 
 <footer>
   <p class="foot-logo">✦ St. David's Anglican Church, Osogbo</p>
-  <p>© 2026 St. David's Anglican Church. All rights reserved.</p>
+  <p>© 2026 St. David's Anglican Church. Diocese of Osun. All rights reserved.</p>
 </footer>
 
 </body>
