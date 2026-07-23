@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>St. David's Anglican Church, Osogbo — Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<title>St. David's Anglican Church, Osogbo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -20,72 +20,43 @@
   </ul>
 </nav>
 
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-cross">✝</div>
-    <h1>St. David's <em>Anglican Church</em></h1>
-    <p class="hero-tagline">Diocese of Osun · Church of Nigeria (Anglican Communion)</p>
-    <div class="hero-divider"></div>
-    <p class="hero-sub">"Winning Souls for Christ in Osogbo"</p>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="history.html" class="hero-cta">Learn Our History</a>
-      <a href="contact.html" class="hero-cta" style="background: transparent; border: 1px solid var(--gold); color: var(--gold-light);">Join Us This Sunday</a>
+<header class="page-header" style="padding: 8rem 5%; text-align: center;">
+  <p class="section-label">Diocese of Osun • Anglican Communion</p>
+  <h1 class="section-title" style="font-size: 3.8rem; margin: 1rem 0;">Winning Souls for Christ in <em>Osogbo</em></h1>
+  <div class="gold-line" style="margin: 2rem auto;"></div>
+  <p style="color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 auto 2.5rem auto; font-size: 1.2rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
+    Welcome to the house of prayer, fellowship, and spiritual growth. Rooted in faith, abounding in thanksgiving.
+  </p>
+  <div style="display: flex; gap: 1rem; justify-content: center;">
+    <a href="contact.html" style="background: var(--gold); color: var(--brown); padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 500;">Join Us This Sunday</a>
+    <a href="history.html" style="background: transparent; border: 1px solid rgba(255,255,255,0.4); color: white; padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 500;">Our Heritage</a>
+  </div>
+</header>
+
+<main class="content-container">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 6rem;">
+    <div>
+      <p class="section-label">Welcome Address</p>
+      <h2 class="section-title" style="font-size: 2.5rem; color: var(--brown);">A Beacon of Hope in <em>Osogbo</em></h2>
+      <div class="gold-line" style="margin: 1rem 0;"></div>
+      <p style="color: var(--mid); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8;">
+        St. David's Anglican Church stands as a spiritual home for believers in Osogbo and beyond. Under the pastoral guidance of Rev. Odelola and dedicated leadership, we are committed to preaching the uncompromised Word of God, nurturing families, and impacting our community with Christ's love.
+      </p>
+      <p style="color: var(--mid); font-size: 1.05rem; line-height: 1.8;">
+        Whether you are seeking a permanent church home or visiting Osogbo, you will find a warm, welcoming family waiting to worship with you.
+      </p>
+    </div>
+    <div style="background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(197, 160, 89, 0.2);">
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--brown); margin-bottom: 1.5rem;">Weekly Service Times</h3>
+      <ul style="list-style: none; padding: 0; line-height: 2.2;">
+        <li>⛪ <strong>Sunday Eucharist (1st Service):</strong> 7:30 AM</li>
+        <li>⛪ <strong>Sunday Eucharist (2nd Service):</strong> 10:00 AM</li>
+        <li>📖 <strong>Bible Study (Tuesday):</strong> 5:00 PM</li>
+        <li>🔥 <strong>Prayer & Healing (Thursday):</strong> 5:00 PM</li>
+      </ul>
     </div>
   </div>
-  <div class="hero-scroll">Scroll</div>
-</section>
-
-<section class="about" id="welcome">
-  <div class="about-inner">
-    <div class="about-img-wrap">
-      <img src="https://images.unsplash.com/photo-1548625149-720754862bfb?w=800&q=80" alt="St. David's Anglican Church Osogbo" />
-      <div class="about-img-accent"></div>
-    </div>
-    <div class="about-text">
-      <p class="section-label">Welcome to St. David's</p>
-      <h2 class="section-title">Winning Souls <em>for Christ</em> in Osogbo</h2>
-      <div class="gold-line"></div>
-      <p>St. David's Anglican Church stands as a beacon of faith, hope, and spiritual renewal in the historic city of Osogbo. For generations, our parish has been a vibrant spiritual home where souls are won for Christ, families are nurtured in the Word, and the love of God is shared in fellowship.</p>
-      <p>Whether you are a lifelong Anglican, seeking a new church home visiting Osogbo, or exploring the Christian faith for the first time, you are warmly welcomed at our altar.</p>
-      <blockquote class="verse">
-        "I was glad when they said unto me, Let us go into the house of the LORD."
-        <cite>— Psalm 122:1</cite>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<section class="services" id="services">
-  <div class="services-inner">
-    <p class="section-label">Worship With Us</p>
-    <h2 class="section-title">Weekly <em>Services</em></h2>
-    <div class="gold-line" style="margin: 1.5rem auto;"></div>
-    <p style="color: var(--mid); font-size: 0.95rem; max-width: 500px; margin: 0 auto 3rem;">Join us in reverent Anglican liturgy, uplifting hymns, and powerful preaching.</p>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🕊️</div>
-        <h3>Holy Communion & Mattins</h3>
-        <p class="time">Sunday · 7:30 AM & 10:00 AM</p>
-        <p>Our principal Sunday worship services featuring traditional Anglican liturgy, choir ministrations, and the Word.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📖</div>
-        <h3>Bible Study & Prayer</h3>
-        <p class="time">Wednesday · 5:30 PM</p>
-        <p>Midweek spiritual nourishment as we dive deep into the Scriptures and lift our parish in united intercession.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🙏</div>
-        <h3>Youth & Parish Fellowship</h3>
-        <p class="time">Saturday · 4:00 PM</p>
-        <p>Engaging youth activities, choir rehearsals, and societies meetings preparing for Sunday service.</p>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
 <footer>
   <p class="foot-logo">✦ St. David's Anglican Church, Osogbo</p>
