@@ -20,39 +20,6 @@
     color: var(--dark);
     font-family: 'Jost', sans-serif;
   }
-  nav {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    padding: 1.25rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-  }
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 1.75rem;
-  }
-  .nav-links a {
-    color: rgba(255,255,255,0.85);
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-  }
-  .nav-links a:hover, .nav-links a.active {
-    color: var(--gold);
-  }
   .page-header {
     background: linear-gradient(rgba(30,60,114,0.9), rgba(42,82,152,0.9)), url('https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=1200&q=80') center/cover;
     color: white;
@@ -132,18 +99,48 @@
     font-size: 0.98rem;
     line-height: 1.6;
   }
-  footer {
-    background: var(--primary);
-    color: white;
+
+  /* Horizontal Scrollable Vicars Track */
+  .vicars-scroll-container {
+    position: relative;
+    margin-top: 2rem;
+  }
+  .vicars-track {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .vicars-track::-webkit-scrollbar {
+    height: 8px;
+  }
+  .vicars-track::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.05);
+    border-radius: 4px;
+  }
+  .vicars-track::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 4px;
+  }
+  .vicar-card {
+    min-width: 280px;
+    max-width: 280px;
+    flex: 0 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
     text-align: center;
-    padding: 3rem 1rem;
-    margin-top: 5rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    scroll-snap-align: start;
+    border-top: 4px solid var(--gold);
+    transition: transform 0.3s;
   }
-  .foot-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+  .vicar-card:hover {
+    transform: translateY(-4px);
   }
+  
   @media(max-width: 768px) {
     .nav-links { display: none; }
     .section-title { font-size: 2.2rem; }
@@ -152,15 +149,17 @@
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo">✝ St. David's Osogbo</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="history.html">History</a></li>
-    <li><a href="members.html" class="active">Members & Priests</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo"><a href="index.html">✝ St. David's Osogbo</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="members.html" class="active">Members & Priests</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <header class="page-header">
@@ -174,30 +173,65 @@
 
 <main class="content-container">
   
+  <!-- Current Vicar -->
   <section style="margin-bottom: 5rem;">
     <div style="text-align: center; margin-bottom: 3rem;">
       <p class="section-label">Spiritual Leadership</p>
-      <h2 class="section-title">Clerical <em>Succession</em></h2>
+      <h2 class="section-title">Current <em>Vicar</em></h2>
       <div class="gold-line"></div>
-      <p style="color: var(--mid);">Honoring the devoted priests who have shepherded St. David's through the decades.</p>
+      <p style="color: var(--mid);">Leading St. David's with spiritual wisdom, administrative excellence, and pastoral zeal.</p>
     </div>
 
-    <div class="grid-cards">
+    <div style="max-width: 400px; margin: 0 auto;">
       <div class="card-item">
         <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=300&q=80" alt="Rev. Odelola" class="card-avatar">
         <h3>Rev. Odelola</h3>
         <p class="card-role">Vicar / Parish Priest</p>
-        <p class="card-desc">Leading St. David's with spiritual wisdom, administrative excellence, and pastoral zeal.</p>
-      </div>
-      <div class="card-item">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Past Vicars" class="card-avatar">
-        <h3>Past Vicars & Priests</h3>
-        <p class="card-role">Roll of Honor</p>
-        <p class="card-desc">Succeeding generations of faithful heralds of the Gospel who laid down deep roots in Osogbo.</p>
+        <p class="card-desc">Guiding the congregation in faith, community service, and spiritual growth.</p>
       </div>
     </div>
   </section>
 
+  <!-- Past Vicars Horizontal Scroll -->
+  <section style="margin-bottom: 5rem;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <p class="section-label">Roll of Honor</p>
+      <h2 class="section-title">Past <em>Vicars</em> & Priests</h2>
+      <div class="gold-line"></div>
+      <p style="color: var(--mid);">Swipe horizontally to explore the dedicated shepherds who served through the decades.</p>
+    </div>
+
+    <div class="vicars-scroll-container">
+      <div class="vicars-track">
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Ven. J. A. Adebayo" class="card-avatar">
+          <h3>Ven. J. A. Adebayo</h3>
+          <p class="card-role">1998 – 2008</p>
+          <p class="card-desc">Oversaw the expansion of the church nave and establishment of the youth fellowship.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Rt. Rev. M. O. Fagun" class="card-avatar">
+          <h3>Rt. Rev. M. O. Fagun</h3>
+          <p class="card-role">1985 – 1997</p>
+          <p class="card-desc">Strengthened diocesan ties and nurtured deep spiritual discipline in the parish.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80" alt="Canon E. B. Olawale" class="card-avatar">
+          <h3>Canon E. B. Olawale</h3>
+          <p class="card-role">1970 – 1984</p>
+          <p class="card-desc">Pioneered community outreach programs and the founding of the church choir.</p>
+        </div>
+        <div class="vicar-card">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" alt="Rev. D. A. Alabi" class="card-avatar">
+          <h3>Rev. D. A. Alabi</h3>
+          <p class="card-role">1955 – 1969</p>
+          <p class="card-desc">Established foundational educational classes and anchored early parish growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pioneer Families -->
   <section>
     <div style="text-align: center; margin-bottom: 3rem;">
       <p class="section-label">Foundational Pillars</p>
