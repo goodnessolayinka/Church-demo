@@ -3,44 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Members & Clergy — St. David's Anglican Church, Osogbo</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Members & Priests — St. David's Anglican Church, Osogbo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-  .members-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 2rem;
-    max-width: 1100px;
-    margin: 3rem auto 0 auto;
-  }
-  .member-card {
-    background: #fff;
-    border-top: 3px solid var(--gold);
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-    text-align: center;
-    padding-bottom: 1.5rem;
-  }
-  .member-img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    background: #eee;
-    filter: sepia(0.1);
-  }
-  .member-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    color: var(--brown);
-    margin: 1rem 1rem 0.2rem 1rem;
-  }
-  .member-card p {
-    font-size: 0.85rem;
-    color: var(--gold);
-    letter-spacing: 0.05em;
-  }
-</style>
 </head>
 <body>
 
@@ -49,82 +14,76 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="history.html">History</a></li>
-    <li><a href="members.html" class="active">Members</a></li>
+    <li><a href="members.html" class="active">Members & Priests</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<section class="hero" style="min-height: 55vh;">
-  <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=1600&q=80');"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="section-label" style="color: var(--gold-light);">Our Legacy</p>
-    <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem);">Pioneer Members <em>& Past Priests</em></h1>
-  </div>
-</section>
+<header class="page-header">
+  <p class="section-label">Faithful Stewards</p>
+  <h1 class="section-title">Pioneer Members & <em>Clergy</em></h1>
+  <div class="gold-line" style="margin: 1.5rem auto;"></div>
+  <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; font-size: 1.05rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
+    Honoring the shoulders upon which our vibrant parish stands today.
+  </p>
+</header>
 
-<section style="background: var(--cream); padding: 5rem 2rem;">
-  <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
-    <p class="section-label">Honoring Our Founders</p>
-    <h2 class="section-title">Pioneer <em>Members</em></h2>
-    <div class="gold-line" style="margin: 1.5rem auto;"></div>
-    <p style="color: var(--mid); max-width: 600px; margin: 0 auto 3rem auto; font-size: 0.95rem;">
-      We honor the visionary men and women whose sacrifice, prayers, and steadfast devotion laid the unshakable foundation of St. David's Anglican Church in Osogbo.
-    </p>
+<main class="content-container">
+  
+  <section style="margin-bottom: 4rem;">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <p class="section-label">Spiritual Leadership</p>
+      <h2 class="section-title">Clerical <em>Succession</em></h2>
+      <div class="gold-line" style="margin: 1rem auto;"></div>
+      <p style="color: var(--mid);">Honoring the devoted priests who have shepherded St. David's through the decades.</p>
+    </div>
 
-    <div class="members-grid">
-      <div class="member-card">
-        <img class="member-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Pioneer Member">
-        <h3>Chief & Mrs. Pioneer</h3>
-        <p>Founding Patrons</p>
+    <div class="grid-cards">
+      <div class="card-item">
+        <div class="card-img-placeholder">🕊️</div>
+        <h3>Rev. Odelola</h3>
+        <p class="card-role">Vicar / Parish Priest</p>
+        <p class="card-desc">Leading St. David's with spiritual wisdom, administrative excellence, and pastoral zeal.</p>
       </div>
-      <div class="member-card">
-        <img class="member-img" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=80" alt="Pioneer Member">
-        <h3>Mama Rebecca Adeleke</h3>
-        <p>Pioneer Women's Guild Leader</p>
-      </div>
-      <div class="member-card">
-        <img class="member-img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80" alt="Pioneer Member">
-        <h3>Pa James Alabi</h3>
-        <p>Pioneer Church Warden</p>
+      <div class="card-item">
+        <div class="card-img-placeholder">✝</div>
+        <h3>Past Vicars & Priests</h3>
+        <p class="card-role">Roll of Honor</p>
+        <p class="card-desc">Succeeding generations of faithful heralds of the Gospel who laid down deep roots in Osogbo.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section style="background: #fff; padding: 5rem 2rem;">
-  <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
-    <p class="section-label">Shepherds of the Flock</p>
-    <h2 class="section-title">Past <em>Vicars & Priests</em></h2>
-    <div class="gold-line" style="margin: 1.5rem auto;"></div>
-    <p style="color: var(--mid); max-width: 600px; margin: 0 auto 3rem auto; font-size: 0.95rem;">
-      Dedicated clergymen who have faithfully led St. David's across the decades, nurturing spiritual growth and community development. (Archives curated with guidance from Rev. Odelola).
-    </p>
+  <section>
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <p class="section-label">Foundational Pillars</p>
+      <h2 class="section-title">Pioneer <em>Families</em></h2>
+      <div class="gold-line" style="margin: 1rem auto;"></div>
+      <p style="color: var(--mid);">Remembering the steadfast families whose sacrifice and dedication built our sanctuary.</p>
+    </div>
 
-    <div class="members-grid">
-      <div class="member-card">
-        <img class="member-img" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="Past Priest">
-        <h3>Ven. Canon J. O. Adebayo</h3>
-        <p>Ret. Vicar (1982 — 1995)</p>
+    <div class="grid-cards">
+      <div class="card-item">
+        <div class="card-img-placeholder">🏛️</div>
+        <h3>Founding Elders</h3>
+        <p class="card-role">Pioneer Pillar</p>
+        <p class="card-desc">The early church committee members and lay readers who stood firm during the inception years.</p>
       </div>
-      <div class="member-card">
-        <img class="member-img" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="Past Priest">
-        <h3>Rev. Dr. S. O. Odelola</h3>
-        <p>Archival Historian & Priest</p>
-      </div>
-      <div class="member-card">
-        <img class="member-img" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80" alt="Past Priest">
-        <h3>Rt. Rev. Bishop E. A. Olajide</h3>
-        <p>Former Diocesan Shepherd</p>
+      <div class="card-item">
+        <div class="card-img-placeholder">👥</div>
+        <h3>Congregational Heritage</h3>
+        <p class="card-role">Parishioners</p>
+        <p class="card-desc">Generations of families carrying the torch of Anglican worship across Osogbo and beyond.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+</main>
 
 <footer>
   <p class="foot-logo">✦ St. David's Anglican Church, Osogbo</p>
-  <p>© 2026 St. David's Anglican Church. All rights reserved.</p>
+  <p>© 2026 St. David's Anglican Church. Diocese of Osun. All rights reserved.</p>
 </footer>
 
 </body>
