@@ -2,60 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Gallery — St. David's Anglican Church, Osogbo</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-  :root {
-    --primary: #1e3c72;
-    --secondary: #2a5298;
-    --gold: #c5a059;
-    --cream: #faf8f5;
-    --dark: #222222;
-    --mid: #555555;
-  }
-  body {
-    background-color: var(--cream);
-    color: var(--dark);
-    font-family: 'Jost', sans-serif;
-  }
-  nav {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-  }
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 1.25rem;
-  }
-  .nav-links a {
-    color: rgba(255,255,255,0.85);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-  }
-  .nav-links a:hover, .nav-links a.active {
-    color: var(--gold);
-  }
   .page-header {
     background: linear-gradient(rgba(30,60,114,0.9), rgba(42,82,152,0.9)), url('https://images.unsplash.com/photo-1548625149-720754862bfb?auto=format&fit=crop&w=1200&q=80') center/cover;
     color: white;
     text-align: center;
-    padding: 3.5rem 1rem;
+    padding: 4rem 1rem;
   }
   .section-label {
     text-transform: uppercase;
@@ -66,7 +22,7 @@
   }
   .section-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 600;
   }
   .section-title em {
@@ -80,13 +36,13 @@
     margin: 0.8rem auto;
   }
   .content-container {
-    max-width: 1000px;
-    margin: 2.5rem auto;
-    padding: 0 1rem;
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
   }
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
   }
   .g-item {
@@ -101,55 +57,44 @@
   }
   .g-item img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
   }
   .g-caption {
-    padding: 1rem;
+    padding: 1.25rem;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--primary);
     text-align: center;
     font-weight: 600;
   }
-  footer {
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 2.5rem 1rem;
-    margin-top: 4rem;
-    font-size: 0.9rem;
-  }
-  .foot-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem;
-  }
   @media(max-width: 768px) {
     .nav-links { display: none; }
-    .section-title { font-size: 1.9rem; }
+    .section-title { font-size: 2rem; }
     .page-header { padding: 3rem 1rem; }
   }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo">✝ St. David's Osogbo</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="history.html">History</a></li>
-    <li><a href="members.html">Members & Priests</a></li>
-    <li><a href="gallery.html" class="active">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo"><a href="index.html">✝ St. David's Osogbo</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="members.html">Members & Priests</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <header class="page-header">
   <p class="section-label">Visual Archive</p>
   <h1 class="section-title">Sanctuary & <em>Life</em></h1>
   <div class="gold-line"></div>
-  <p style="color: rgba(255,255,255,0.85); max-width: 500px; margin: 0 auto; font-size: 0.95rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
+  <p style="color: rgba(255,255,255,0.85); max-width: 500px; margin: 0 auto; font-size: 1rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
     Glimpses of worship, fellowship, and architecture at St. David's.
   </p>
 </header>
@@ -179,9 +124,11 @@
   </div>
 </main>
 
-<footer>
-  <p class="foot-logo">✦ St. David's Anglican Church, Osogbo</p>
-  <p>© 2026 St. David's Anglican Church. Diocese of Osun. All rights reserved.</p>
+<footer class="footer">
+  <div class="container">
+    <p>✦ St. David's Anglican Church, Osogbo</p>
+    <p>© 2026 St. David's Anglican Church. Diocese of Osun. All rights reserved.</p>
+  </div>
 </footer>
 
 </body>
