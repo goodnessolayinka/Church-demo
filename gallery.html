@@ -40,10 +40,20 @@
     margin: 3rem auto;
     padding: 0 1.5rem;
   }
+  .category-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin: 2.5rem 0 1.2rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+  }
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 3rem;
   }
   .g-item {
     background: white;
@@ -94,14 +104,38 @@
 
 <header class="page-header">
   <p class="section-label">Visual Archive</p>
-  <h1 class="section-title">Sanctuary & <em>Life</em></h1>
+  <h1 class="section-title">Sanctuary, Choir & <em>Life</em></h1>
   <div class="gold-line"></div>
   <p style="color: rgba(255,255,255,0.85); max-width: 500px; margin: 0 auto; font-size: 1rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">
-    Explore our magnificent sanctuary interior, exterior architecture, vicarage, and serene church environment.
+    Explore our magnificent sanctuary, historical and current choir guilds, vicarage, and serene church environment.
   </p>
 </header>
 
 <main class="content-container">
+
+  <!-- Choir Guild Section -->
+  <h2 class="category-title">The Choir Guild (Past & Present)</h2>
+  <div class="gallery-grid">
+    <div class="g-item">
+      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80" alt="Current Choir Guild" />
+      <div class="g-caption">Current Parish Choir in Vestments (2026)</div>
+    </div>
+    <div class="g-item">
+      <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800&q=80" alt="Youth & Junior Choir" />
+      <div class="g-caption">St. David's Junior & Youth Choristers</div>
+    </div>
+    <div class="g-item">
+      <img src="https://images.unsplash.com/photo-1520523839896-54a86299f43f?w=800&q=80" alt="Historical Choir 1980s" />
+      <div class="g-caption">Historical Choir Guild (Late 1980s Archive)</div>
+    </div>
+    <div class="g-item">
+      <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80" alt="Special Festival Choir" />
+      <div class="g-caption">Diocesan Festival Combined Choir</div>
+    </div>
+  </div>
+
+  <!-- Sanctuary & Infrastructure Section -->
+  <h2 class="category-title">Sanctuary & Grounds</h2>
   <div class="gallery-grid">
     <div class="g-item">
       <img src="https://images.unsplash.com/photo-1548625149-720754862bfb?w=800&q=80" alt="Church Exterior" />
@@ -136,6 +170,7 @@
       <div class="g-caption">Church Compound Greenery & Walkways</div>
     </div>
   </div>
+
 </main>
 
 <footer class="footer">
