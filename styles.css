@@ -276,3 +276,12 @@ body {
   .stacked-navbar .top-bar .logo { font-size: 1.25rem; }
   .stacked-navbar .nav-links { gap: 1rem; font-size: 0.9rem; }
 }
+
+
+@media(max-width: 900px) {
+  .responsive-vicar-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    padding: 2rem 1.5rem !important;
+  }
+}
