@@ -6,6 +6,14 @@
 <title>St. David's Anglican Church, Osogbo</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .hero-home { padding: 6rem 2rem; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; text-align: center; }
+  .service-card { background: white; border-radius: 12px; padding: 2.5rem 2rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border-top: 4px solid var(--gold); transition: transform 0.3s ease; }
+  .service-card:hover { transform: translateY(-5px); }
+  .guild-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.06); text-align: center; border-bottom: 4px solid var(--gold); }
+  .guild-card img { width: 100%; height: 200px; object-fit: cover; }
+  .guild-content { padding: 1.5rem; }
+</style>
 </head>
 <body>
 
@@ -24,7 +32,7 @@
   </div>
 </nav>
 
-<section class="hero" style="padding: 6rem 2rem; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; text-align: center;">
+<section class="hero-home">
   <div class="container" style="max-width: 800px; margin: 0 auto;">
     <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 0.75rem; color: #c5a059; font-weight: 500;">Diocese of Osun • Anglican Communion</p>
     <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; margin-bottom: 1.25rem; color: white; line-height: 1.2;">Welcome to St. David's Anglican Church</h1>
@@ -36,21 +44,104 @@
   </div>
 </section>
 
-<section class="about">
+<!-- Vicar's Welcome Section -->
+<section style="padding: 5rem 0; background: var(--cream);">
   <div class="container">
-    <div class="about-grid">
-      <div>
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: #1e3c72; margin-bottom: 1.25rem;">A Heritage of Grace & Truth</h2>
-        <p style="color: #555; line-height: 1.8; margin-bottom: 1.25rem;">
-          St. David's Anglican Church, Osogbo stands as a historic lighthouse of the Gospel. For generations, our parish has nurtured spiritual growth, fostered deep communal bonds, and served as a spiritual home for countless believers across Osun State and beyond.
-        </p>
-        <p style="color: #555; line-height: 1.8; margin-bottom: 1.5rem;">
-          Whether you are seeking a vibrant worship community, looking to deepen your walk with God, or visiting Osogbo, our doors and hearts are wide open to welcome you into our family.
-        </p>
-        <a href="members.html" style="color: #1e3c72; font-weight: 600; text-decoration: underline;">Meet our Priests & Leadership →</a>
+    <div style="max-width: 900px; margin: 0 auto; background: white; border-radius: 12px; padding: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.06); display: grid; grid-template-columns: 280px 1fr; gap: 2.5rem; align-items: center;" class="vicar-welcome-grid">
+      <div style="text-align: center;">
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=400&q=80" alt="Rev. Odelola" style="width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 4px solid var(--gold); box-shadow: 0 8px 20px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--primary);">Rev. Odelola</h3>
+        <p style="color: var(--gold); font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Vicar & Parish Priest</p>
       </div>
       <div>
-        <img src="https://images.unsplash.com/photo-1543807535-eceef0bc6679?auto=format&fit=crop&w=800&q=80" alt="Church Interior" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; color: var(--gold); margin-bottom: 0.5rem;">From the Vicar's Desk</p>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--primary); margin-bottom: 1rem;">A Warm Welcome in His Name</h2>
+        <p style="color: var(--mid); line-height: 1.8; margin-bottom: 1rem; font-size: 0.98rem;">
+          Grace and peace to you in the matchless name of our Lord and Saviour Jesus Christ. Whether you are worshipping with us for the first time or have journeyed with St. David's for decades, our doors and hearts are open to embrace you in true Christian fellowship.
+        </p>
+        <p style="color: var(--mid); line-height: 1.8; font-size: 0.98rem; font-style: italic;">
+          "Enter into His gates with thanksgiving, and into His courts with praise." We invite you to experience the life-transforming power of God's Word and vibrant liturgy with us.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Weekly Service Schedule -->
+<section style="padding: 5rem 0; background: white;">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem;">Worship With Us</p>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 600; color: var(--primary);">Weekly <em>Services</em></h2>
+      <div style="width: 60px; height: 3px; background: var(--gold); margin: 1rem auto;"></div>
+      <p style="color: var(--mid);">Join our uplifting Sunday liturgies, midweek prayers, and spiritual growth classes.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+      <div class="service-card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌅</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem;">1st Holy Communion</h3>
+        <p style="color: var(--gold); font-weight: 500; font-size: 0.9rem; margin-bottom: 1rem;">Sunday • 7:00 AM</p>
+        <p style="color: var(--mid); font-size: 0.95rem; line-height: 1.6;">A solemn, early morning service of Holy Eucharist in deep reverence and quiet communion.</p>
+      </div>
+
+      <div class="service-card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⛪</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem;">2nd Divine Service</h3>
+        <p style="color: var(--gold); font-weight: 500; font-size: 0.9rem; margin-bottom: 1rem;">Sunday • 9:30 AM</p>
+        <p style="color: var(--mid); font-size: 0.95rem; line-height: 1.6;">Our main congregational celebration featuring dynamic choir ministrations, scripture readings, and inspiring sermons.</p>
+      </div>
+
+      <div class="service-card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📖</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem;">Midweek Prayer & Study</h3>
+        <p style="color: var(--gold); font-weight: 500; font-size: 0.9rem; margin-bottom: 1rem;">Wednesday • 5:00 PM</p>
+        <p style="color: var(--mid); font-size: 0.95rem; line-height: 1.6;">Dive deeper into the Holy Scriptures and corporate intercession during our interactive Bible study.</p>
+      </div>
+
+      <div class="service-card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🕊️</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem;">Youth & Women Guilds</h3>
+        <p style="color: var(--gold); font-weight: 500; font-size: 0.9rem; margin-bottom: 1rem;">Saturdays • 4:00 PM</p>
+        <p style="color: var(--mid); font-size: 0.95rem; line-height: 1.6;">Engaging fellowship meetings fostering spiritual growth among women, youth, and men's societies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Parish Ministries Overview -->
+<section style="padding: 5rem 0; background: var(--cream);">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem;">Active Fellowships</p>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 600; color: var(--primary);">Parish <em>Ministries</em></h2>
+      <div style="width: 60px; height: 3px; background: var(--gold); margin: 1rem auto;"></div>
+      <p style="color: var(--mid);">Discover where you can serve, connect, and flourish within our vibrant church community.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      <div class="guild-card">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" alt="Women's Guild">
+        <div class="guild-content">
+          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem;">Women's Guild & Mothers' Union</h3>
+          <p style="color: var(--mid); font-size: 0.9rem; line-height: 1.6;">Nurturing Christian homes, empowering mothers, and spearheading charitable welfare projects across Osogbo.</p>
+        </div>
+      </div>
+
+      <div class="guild-card">
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Choir Guild">
+        <div class="guild-content">
+          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem;">The Parish Choir Guild</h3>
+          <p style="color: var(--mid); font-size: 0.9rem; line-height: 1.6;">Leading reverent Anglican liturgy and soul-stirring anthems through classical and contemporary sacred music.</p>
+        </div>
+      </div>
+
+      <div class="guild-card">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Youth Fellowship">
+        <div class="guild-content">
+          <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem;">Anglican Youth Fellowship (AYF)</h3>
+          <p style="color: var(--mid); font-size: 0.9rem; line-height: 1.6;">Empowering the next generation of Christian leaders through impactful Bible studies, outreach, and mentorship.</p>
+        </div>
       </div>
     </div>
   </div>
